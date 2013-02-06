@@ -1,0 +1,13 @@
+.sass-cache
+
+/node_modules/
+/components/
+/npm-debug.log
+/workspace/test/junit/
+/build/components/
+/deploy/*.html
+/workspace/test/casper/screenshots/
+/workspace/test/casper/xunit/
+/workspace/test/jasmine/junit/
+/deploy/assets/css/
+/deploy/assets/lib/

@@ -1,0 +1,35 @@
+{
+  "name": "aziz-syed.com",
+  "version": "0.0.1",
+  "description": "aziz-syed.com",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "~0.4.0rc7",
+    "grunt-bower-task": "~0.1.0",
+    "grunt-compass": "~0.3.8",
+    "grunt-contrib-concat": "~0.1.1",
+    "grunt-contrib-jshint": "~0.1.0",
+    "grunt-contrib-watch": "~0.1.4",
+    "grunt-init": "~0.1.0",
+    "bower": "~0.6.8",
+    "grunt-templates": "~0.1.0",
+    "handlebars": "~1.0.8",
+    "grunt-lib-contrib": "~0.3.1",
+    "grunt-contrib-jasmine": "~0.3.0rc5",
+    "typescript": "~0.8.2",
+    "grunt-ghost": "~0.1.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "grunt test",
+    "install": "./build/install.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://azizsyed@github.com/azizsyed/aziz-syed.com.git"
+  },
+  "author": "Aziz Syed",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "0a1c44acb84f37fa957bf101b9f5cd221d59501d"
+}

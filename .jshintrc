@@ -1,0 +1,32 @@
+{
+    "curly": true,
+    "eqeqeq": true,
+    "immed": true,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "sub": true,
+    "undef": true,
+    "boss": true,
+    "eqnull": true,
+    "browser": true,
+    "debug": true,
+    "trailing": false,
+    "maxparams": 2,
+    "maxstatements": 10,
+    "maxdepth": 3,
+	"supernew": true,
+    "globals": {
+        "jQuery": true,
+        "$": true,
+        "alert": true,
+        "console": true,
+        "require": true,
+        "module": true,
+        "exports": true,
+        "define": true,
+        "$LAB": true,
+        "Application": true,
+		"ProjectNameSpace": true
+    }
+}

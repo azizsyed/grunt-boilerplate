@@ -1,4 +1,2 @@
-grunt-boilerplate
-=================
-
-A boilerplate using Grunt to handle development tasks
+Aziz-Syed.com
+============================

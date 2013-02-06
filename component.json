@@ -1,0 +1,36 @@
+{
+  "name": "Shared Components",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "~1.8.0",
+    "bootstrap-sass": "*",
+    "json2": "*",
+    "font-awesome": "~3.0.2",
+    "flexslider": "latest",
+    "modernizr": "~2.6.2",
+    "labjs": "latest"
+  },
+  "exportsOverride": {
+    "bootstrap-sass": {
+      "deploy/assets/lib": ["js/*.js","img/*.*"]
+    },
+    "font-awesome": {
+      "deploy/assets/lib": ["css/*.*","font/*.*"]
+    },
+    "labjs": {
+      "deploy/assets/lib": "LAB.min.js"
+    },
+    "flexslider": {
+      "deploy/assets/lib/": ["flexslider.css", "images/*.*", "jquery.flexslider-min.js"]
+    },
+    "jquery": {
+      "deploy/assets/lib": "jquery.min.js"
+    },
+    "json2": {
+      "deploy/assets/lib": "json2.js"
+    },
+    "modernizr": {
+      "deploy/assets/lib": "modernizr.js"
+    }
+  }
+}
