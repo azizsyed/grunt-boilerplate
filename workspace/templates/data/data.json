@@ -1,32 +1,3 @@
 {
-	"title": "[BRAND]",
-	"header": {
-		"links": [
-			{
-				"link": "index.html",
-				"icon": "icon-home",
-				"text": ""
-			},
-			{
-				"link": "contact.html",
-				"icon": "icon-envelope",
-				"text": ""
-			},
-			{
-				"link": "about.html",
-				"icon": "icon-user",
-				"text": ""
-			},
-			{
-				"link": "https://github.com/azizsyed",
-				"icon": "icon-github",
-				"text": ""
-			},
-			{
-				"link": "http://linkedin.com/pub/aziz-syed/64/959/b8",
-				"icon": "icon-linkedin",
-				"text": ""
-			}
-		]
-	}
+	"title": "[brand]"
 }
