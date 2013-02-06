@@ -2,7 +2,7 @@ var casper = require('casper').create(),
 	utils = require("utils");
 
 var options = {
-	url: "http://local.aziz-syed.com/casper.html",
+	url: "http://local.grunt-boilerplate.com/casper.html",
 	basePath: "",
 	screenshot: {
 		'directory' : 'screenshots/',
