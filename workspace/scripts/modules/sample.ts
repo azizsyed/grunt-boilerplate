@@ -1,6 +1,6 @@
 /// <reference path="../lib-interfaces/jquery/jquery.d.ts" />
 
-var SearchForm = function(form: number){
+var SearchForm = function(form: Object){
 	var self = this;
 	
     self.form = form;
