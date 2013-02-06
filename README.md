@@ -1,2 +1,2 @@
-Aziz-Syed.com
+Grunt Boilerplate
 ============================

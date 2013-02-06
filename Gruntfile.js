@@ -31,6 +31,10 @@ module.exports = function (grunt) {
             'templates': {
                 files: 'workspace/templates/**/*.*',
                 tasks: ['templates']
+            },
+            'typescript': {
+                files: ['workspace/scripts/*.ts','workspace/scripts/modules/**/*.ts'],
+                tasks: ['typescript']
             }
         },
         bower: {
@@ -92,7 +96,9 @@ module.exports = function (grunt) {
         typescript: {
             compile: {
                 files: {
-                    'deploy/assets/scripts/modules/sample.js': ['workspace/scripts/sample.ts']
+                    'deploy/assets/scripts/main.js': ['workspace/scripts/main.ts'],
+                    'deploy/assets/scripts/modules/app.js': ['workspace/scripts/modules/app.ts'],
+                    'deploy/assets/scripts/modules/sample.js': ['workspace/scripts/modules/sample.ts']
                 },
                 options: {}
             },

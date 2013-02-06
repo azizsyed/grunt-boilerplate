@@ -1,3 +1,7 @@
+/// <reference path="custom-interfaces/labjs/labjs.d.ts" />
+/// <reference path="modules/app.ts" />
+/// <reference path="modules/sample.ts" />
+
 $LAB.setGlobalDefaults({
 	'BasePath': 'assets/scripts/'
 });
@@ -9,6 +13,6 @@ $LAB
 		var application = new Application();
 		application.testMethod();
 		
-		new ProjectNameSpace.Forms.SearchForm($("form#search"));
+		new SearchForm($("form#search"));
 	})
 ;

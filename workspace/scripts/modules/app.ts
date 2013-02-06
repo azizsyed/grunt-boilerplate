@@ -1,6 +1,6 @@
-var Application;
+/// <reference path="../lib-interfaces/jquery/jquery.d.ts" />
 
-Application = function(){
+var Application = function(){
 	var self = this;
 	
 	self.testMethod = function(){
