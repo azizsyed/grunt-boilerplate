@@ -27,6 +27,7 @@
         "define": true,
         "$LAB": true,
         "Application": true,
-		"ProjectNameSpace": true
+		"ProjectNameSpace": true,
+		"SearchForm": true
     }
 }

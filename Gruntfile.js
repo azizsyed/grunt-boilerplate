@@ -46,7 +46,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-        compass: {
+        compass: {  
             dev: {
                 src: 'workspace/scss/project',
                 dest: 'deploy/assets/css',

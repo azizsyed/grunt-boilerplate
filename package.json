@@ -24,11 +24,6 @@
     "test": "grunt test",
     "install": "./build/install.sh"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://azizsyed@github.com/azizsyed/aziz-syed.com.git"
-  },
-  "author": "Aziz Syed",
   "license": "BSD",
   "readmeFilename": "README.md",
   "gitHead": "0a1c44acb84f37fa957bf101b9f5cd221d59501d"
