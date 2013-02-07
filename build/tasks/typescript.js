@@ -66,12 +66,12 @@ module.exports = function(grunt) {
     return copy;
   };
 
-  var compile = function (tscpath, srcs, trg, options, cb) {
+  var compile = function (tscpath, srcs, trg, options, baseOutputPath, cb) {
     if (srcs.length === 1) {
-      compileOneToOne(tscpath, srcs[0], trg, options, cb);
+      compileOneToOne(tscpath, srcs[0], trg, options, baseOutputPath, cb);
     }
     else if (srcs.length > 1) {
-      compileManyToOne(tscpath, srcs, trg, options, cb);
+      compileManyToOne(tscpath, srcs, trg, options, baseOutputPath, cb);
     }
     else {
       cb();
@@ -114,7 +114,7 @@ module.exports = function(grunt) {
     }
   };
 
-  var compileOneToOne = function (tscpath, src, trg, options, cb) {
+  var compileOneToOne = function (tscpath, src, trg, options, baseOutputPath, cb) {
     var cmd = {
       cmd : tscpath,
       args : [src]
@@ -129,6 +129,10 @@ module.exports = function(grunt) {
       grunt.file.copy(srcpath, backupPath);
     }
 
+	if (baseOutputPath){
+		trg = srcpath.replace(baseOutputPath,trg);
+	}
+
     grunt.util.spawn(cmd, function (error, result) {
       checkCompilerOutput(trg, error, result, function () {
         grunt.file.copy(srcpath, trg);
@@ -141,22 +145,21 @@ module.exports = function(grunt) {
     });
   };
 
-  var compileManyToOne = function (tscpath, srcs, trg, options, cb) {
-    var cmd = {
-      cmd : tscpath,
-      args : ['--out', trg]
-    };
-    cmd.args.push.apply(cmd.args, srcs);
-    cmd.args.push.apply(cmd.args, optsToTscArgs(options));
-    grunt.verbose.writeln(cmdToString(cmd));
-    grunt.util.spawn(cmd, function (error, result) {
-      checkCompilerOutput(trg, error, result);
-      cb();
-    });
+  var compileManyToOne = function (tscpath, srcs, trg, options, baseOutputPath, cb) {
+	srcs.forEach(function(src){
+		compileOneToOne(tscpath, src, trg, options, baseOutputPath, cb);
+	});
   };
 
   grunt.registerMultiTask('typescript', 'Compile TypeScript files to JavaScript', function() {
     var done = this.async();
+
+	var self = this;
+	var baseOutputPath = null;
+	
+	if (this.data.options && this.data.options.baseOutputPath){
+		baseOutputPath = this.data.options.baseOutputPath;
+	}
 
     var options = helpers.options(this, {
       basePath          : '',
@@ -209,12 +212,23 @@ module.exports = function(grunt) {
       return isAmbientFile(file.dest);
     });
 
+	var count = files[0].src.length;
+	var almostDone = grunt.util._.after(count, done);
+
     // Execute pases in parallel
-    var almostDone = grunt.util._.after(files.length, done);
     withTscCommand(options.tsc, function (tsc) {
       grunt.util.async.forEachLimit(files, os.cpus().length, function (file, finish) {
-        grunt.file.mkdir(path.dirname(file.dest));
-        compile(tsc, file.src, file.dest, options, function () {
+		var dest = file.dest;
+		
+		if (dest.indexOf("*.js")!=-1){
+			dest = path.dirname(file.dest);
+		}
+		else{
+			//dest = "deploy/assets/scripts"
+		}
+		
+        grunt.file.mkdir(dest);
+        compile(tsc, file.src, dest, options, baseOutputPath, function () {
           finish();
           almostDone();
         });
