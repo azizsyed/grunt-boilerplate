@@ -99,8 +99,8 @@ module.exports = function (grunt) {
                     'deploy/assets/scripts': ['workspace/scripts/*.ts', 'workspace/scripts/modules/**/*.ts']
                 },
                 options: {
-	                baseOutputPath: 'workspace/scripts',
-	            }
+                    baseOutputPath: 'workspace/scripts'
+                }
             },
             options: {
                 //basePath: 'test'
