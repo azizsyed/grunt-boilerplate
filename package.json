@@ -22,7 +22,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "grunt test",
-    "install": "./build/install.sh"
+    "build": "./build/install.sh"
   },
   "license": "BSD",
   "readmeFilename": "README.md",

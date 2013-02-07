@@ -11,7 +11,8 @@ Requirements
 Installation
 ------------
 + Install any of the required components from the "Requirements" section
-+ From your command line, execute: "npm run-script install"
++ From your command line, execute: "npm install"
++ From your command line, execute: "npm run-script build"
 + Setup your web server to serve the "deploy" folder
 
 Grunt
