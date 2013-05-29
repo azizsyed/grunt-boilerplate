@@ -272,5 +272,5 @@ module.exports = function (grunt) {
 
 	// Default task.
 	grunt.registerTask('default', ['build-prod']);
-	grunt.registerTask('test', ['ghost']);
+	grunt.registerTask('test', ['karma', 'ghost']);
 };

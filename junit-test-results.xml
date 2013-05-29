@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="PhantomJS 1.9 (Mac)" package="undefined" timestamp="2013-05-29T06:11:32" id="0" hostname="DCM30B4AGYL" tests="4" errors="0" failures="0" time="0.003">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.0 Safari/534.34"/>
+    </properties>
+    <testcase name="should multiply" time="0.002" classname="PhantomJS 1.9 (Mac).Sample Module"/>
+    <testcase name="should multiply" time="0" classname="PhantomJS 1.9 (Mac).Sample Module"/>
+    <testcase name="should add" time="0.001" classname="PhantomJS 1.9 (Mac).Sample Module"/>
+    <testcase name="should subtract" time="0" classname="PhantomJS 1.9 (Mac).Sample Module"/>
+    <system-out><![CDATA[
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>
