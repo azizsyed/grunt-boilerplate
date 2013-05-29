@@ -1,0 +1,38 @@
+@mixin transition($value...) {
+    -webkit-transition: $value;
+    -moz-transition: $value;
+    -o-transition: $value;
+    -ms-transition: $value;
+    transition: $value;
+}
+
+@mixin transform($value...) {
+    -webkit-transform: $value;
+    -moz-transform: $value;
+    -o-transform: $value;
+    -ms-transform: $value;
+    transform: $value;
+}
+
+@mixin box-shadow($value...) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+
+@mixin animation($value...) {
+    -moz-animation: $value;
+    -webkit-animation: $value;
+    animation: $value;
+}
+
+@mixin font-size($sizeValue: 1.6){
+    font-size: ($sizeValue) + px;
+    font-size: ($sizeValue/10) + rem;
+}
+
+@mixin box-sizing($value){
+    -moz-box-sizing: $value;
+    -webkit-box-sizing: $value;
+    box-sizing: $value;
+}

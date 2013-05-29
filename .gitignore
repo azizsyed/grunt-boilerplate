@@ -1,0 +1,17 @@
+node_modules
+.sass-cache
+
+components
+npm-debug.log
+
+!/deploy/assets/lib/
+/deploy/assets/lib/*
+!/deploy/assets/lib/external/
+
+/deploy/assets/css/
+/deploy/assets/scripts/
+
+*.html
+/workspace/test/results/
+build.zip
+/deploy/assets/images/sprites/

@@ -1,0 +1,8 @@
+{
+  "name": "Shared Components",
+  "version": "0.0.1",
+  "dependencies": {
+  },
+  "exportsOverride": {
+  }
+}

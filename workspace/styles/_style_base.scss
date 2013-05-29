@@ -1,0 +1,17 @@
+@import "sprites-mobile/*.png";
+@include all-sprites-mobile-sprites;
+$sprites-mobile: sprite-map("sprites-mobile/*.png");
+
+@import "_MODULE/768";
+
+* {
+}
+
+body {
+    background: black;
+
+    .hamburger{
+    	background-position: sprite-position($sprites-mobile, hamburger);
+		@include sprite-dimensions($sprites-mobile, hamburger);
+    }
+}

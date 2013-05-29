@@ -1,0 +1,36 @@
+#!/bin/sh
+exit 0
+#Update the path so that "NPM" will work
+TEMPPATH=$PATH
+PATH=$PATH:/usr/local/bin:/usr/local/sbin
+
+RESULT=0
+
+#Run JSLINT
+grunt lint
+RESULT=$?
+
+#if JSLINT fails, do NOT run unit tests
+if [ $RESULT -eq 0 ]
+then
+	echo "JSLINT SUCCESS"
+else
+	exit 1
+fi
+
+#Execute the unit test script
+npm test
+RESULT=$?
+
+#Rest the path
+PATH=$TEMPPATH
+
+#Return the exit code status
+exit $RESULT
+
+# The check below verifies if any invalid keyworks exist
+#INVALIDKEYWORDS="debugger\|alert"
+#VAR=$(git diff --cached | grep -w "$INVALIDKEYWORDS")
+#if [ ! -z "$VAR" ]; then
+#  RESULT=1
+#fi

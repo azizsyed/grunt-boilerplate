@@ -1,0 +1,14 @@
+@import "sprites/*.png";
+@include all-sprites-sprites;
+$sprites-desktop: sprite-map("sprites/*.png");
+
+@import "_MODULE/768";
+
+body {
+    background: orange;
+
+    .sample{
+    	background-position: sprite-position($sprites-desktop, sample);
+		@include sprite-dimensions($sprites-desktop, sample);
+    }
+}
